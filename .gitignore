@@ -1,0 +1,25 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+float raiz(float num)
+{
+	float M = 0.00001;
+	float aprox = num;
+	while((aprox-num/aprox)> M)
+	{
+		aprox = (aprox+num/aprox)/2;
+		cout<<"El resultado aproximado es: "<< aprox <<endl;
+	}
+}
+
+int main()
+{
+	float n, resultado;
+	cout<<"Ingresa algun numero"<<endl;
+	cin>>n;
+	resultado = sqrt(n);
+	cout<<"La raiz cuadrada del numero es: "<< resultado <<endl;
+	raiz(n);
+	return 0;
+}
